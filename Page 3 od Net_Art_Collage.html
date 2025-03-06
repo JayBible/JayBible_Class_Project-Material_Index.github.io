@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layered Webpage</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 1600px;
+        min-height: 900px;
+        margin: auto;
+        position: relative;
+        background: url('Deepsea_LightFilter.jpg') no-repeat center center;
+        background-size: cover; /* Ensure the background image covers the container */
+    }
+
+    .item {
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        transition: all 0.5s;
+        width: 150px; /* Set a fixed width */
+        height: 150px; /* Set a fixed height */
+        z-index: 1; /* Ensure items are above the background */
+        background-color: transparent; /* Make items transparent */
+    }
+
+    .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure images cover the item without repeating */
+    }
+
+    .item1 { top: 2%; left: 35%; }
+    .item2 { top: 74%; left: 11%; }
+    .item3 { top: 22%; left: 29%; }
+    .item4 { top: 81%; right: 5%; }
+    .item5 { top: 21%; right: 20%; }
+    .item6 { bottom: 16%; left: 33%; }
+    .item7 { bottom: 36%; right: 13%; }
+    .item8 { top: 9%; left: 80%; }
+    .item9 { top: 51%; left: -15%; }
+    .item10 { top: 79%; left: 41%; }
+    .item11 { top: 30%; left: 4%; }
+    .item12 { bottom: 44%; right: 3%; }
+
+    .container > *:hover {
+        z-index: 99;
+        transform: scale(1.3);
+    }
+
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 62%;
+        transform: translate(-117%, -50%);
+        opacity: 0; /* Start with the text hidden */
+        animation: fadeIn 2s forwards; /* Apply the fade-in animation */
+        z-index: 100; /* Ensure the text container is above other items */
+        width: 300px; /* Set a fixed width for the text container */
+        max-width: 90%; /* Ensure the text container does not exceed the viewport width */
+        overflow-wrap: break-word; /* Ensure long words break to fit within the container */
+    }
+
+    .fade-in-text {
+        font-size: 26px; /* Increase the font size */
+        font-family: serif; /* Change the font to serif */
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background for better readability */
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1; /* Fade in to full opacity */
+        }
+    }
+
+    .nav-link {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        text-decoration: none;
+        color: black;
+        transition: background 0.3s;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1"><img src="Sea_Angel.png" alt="Image 1"></div>
+    <div class="item item2"><img src="Sassy_Seal.png" alt="Image 2"></div>
+    <div class="item item3"><img src="moon_jelliewellie.png" alt="Image 3"></div>
+    <div class="item item4"><img src="Pink_Coral.png" alt="Image 4"></div>
+    <div class="item item5"><img src="dumbfish.png" alt="Image 5"></div>
+    <div class="item item6"><img src="LIONFISHPOINTYBASTARDDOESNTDESERVEGOODQUALITYPIC!!!!!!!!!.png" alt="Image 6"></div>
+    <div class="item item7"><img src="Swordfish.png" alt="Image 7"></div>
+    <div class="item item8"><img src="Dory.png" alt="Image 8"></div>
+    <div class="item item9"><img src="TANG.png" alt="Image 9"></div>
+    <div class="item item10"><img src="Dreamfish.png" alt="Image 10"></div>
+    <div class="item item11"><img src="Tuna.png" alt="Image 11"></div>
+    <div class="item item12"><img src="ILIKETURTLES.png" alt="Image 12"></div>
+
+    <a href="Page%201%20of%20Net_Art_Collage%20.html" class="nav-link">Go to Page 1</a>
+    <a href="Page%202%20of%20Net_Art_Collage.html" class="nav-link" style="left: 30%;">Go to Page 2</a>
+  </div>
+  <div class="text-container">
+    <div class="fade-in-text">
+      Floor explodes above the ghost. Ocean rants near Floor. Floor refines a designated subroutine next to its stamp. Ocean burns in the crew. Another unsupported master swallows.
+    </div>
+  
